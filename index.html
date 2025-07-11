@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Model Workshop</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles/css/reset.css">
+  <link rel="stylesheet" href="styles/css/main.css">
+  <link rel="stylesheet" href="styles/css/animations.css">
+  <link rel="stylesheet" href="styles/css/responsive.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header sticky-header">
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+        <!-- <li><a class="nav-link scrollto" href="#topics">Topics</a></li> -->
+        <li><a class="nav-link scrollto" href="#call-for-papers">Call for Papers</a></li>
+        <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
+        <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
+        <li><a class="nav-link scrollto" href="#organizers">Organizers</a></li>
+        <li><a class="nav-link scrollto" href="#support-team">Support Team</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+  </header><!-- End Header -->
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in" style="position:relative;overflow:hidden;">
+      <canvas id="waveCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
+      <div class="container" style="position:relative;z-index:1;">
+        <span class="display-text-palatino">World Modeling Workshop</span>
+      </div>
+      <br>
+      <div class="container" style="position:relative;z-index:1;">
+        <h3
+          style="background: #ffffff50; display: inline-block; padding: 0 0.5em; border-radius: 99999rem; backdrop-filter: blur(10px);">
+          Mila, Montreal </h3>
+      </div>
+      <div class="container" style="position:relative;z-index:1;">
+        <p
+          style="background: #ffffff50; display: inline-block; padding: 0 0.5em; border-radius: 99999rem; backdrop-filter: blur(10px);">
+          <strong>Date:</strong> TBD &nbsp; | &nbsp; <strong>Location:</strong> Mila, 6666 Rue Saint-Urbain, Montréal, Canada
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+      <div class="about" style="text-align: justify;">
+        <p>A fundamental capability of AI agents is to model the evolution and dynamics of their environments in response to their own and external actions.
+           This capability is often referred to as world modeling and is essential for prediction, planning, and generalization.
+          Learning world models using deep learning has been an active area of research for nearly a decade. 
+          In recent years, the field has witnessed significant breakthroughs driven by advances in deep neural
+           architectures and scalable learning paradigms. Multiple subfields, including as self-supervised learning (SSL),
+            generative modeling, reinforcement learning (RL), robotics, and large language models (LLMs), have tackled aspects of
+             world modeling, often with different tools and methodologies. While these communities address overlapping challenges,
+              they frequently operate in isolation. As a result, insights and progress in one area may go unnoticed in another,
+               limiting opportunities for synthesis and collaboration. This document outlines a proposal for a workshop on world
+                modeling to be held in February 2026 at Mila. This workshop aims to bridge the aforementioned gap between
+                 WM subfields by fostering open dialogue, critical discussion, and cross-disciplinary exchange. By bringing
+                  together researchers from diverse backgrounds, from early-career researchers to established experts, we hope 
+                  to establish a shared vocabulary, identify common challenges, and surface synergies that can move the field 
+                  forward.</p>
+      </div>
+    </section>
+
+
+    <!-- Call for Papers Section -->
+    <section id="call-for-papers" class="fade-in">
+      <div class="container">
+        <div class="section-header-component">
+          <div class="section-header-row">
+            <span class="section-header-title">Call for Papers</span>
+            <span class="section-header-subtitle">World Modeling Workshop</span>
+          </div>
+        </div>
+        <p>We invite submissions to two complementary tracks:</p>
+        <div class="section-content">
+          <!-- Special Track -->
+          <h3 id="track-special">[Special Track] Agent Environment Design&nbsp;and&nbsp;Evaluation</h3>
+          <p>The special track focuses on our core theme: <strong>agent environment design and evaluation</strong>. We
+            welcome work that advances how environments are specified, generated, measured, and shared.</p>
+          <ul style="list-style-type: disc; padding-left: 1em;">
+            <li><strong>Task &amp; World Specification</strong>: formalization, compositionality, affordance modeling,
+              procedural generation, simulator integration.</li>
+            <li><strong>Evaluation Methodologies</strong>: multi‑step interaction metrics, generalization tests,
+              open‑ended benchmarks, curriculum scaling, human‑in‑the‑loop assessments.</li>
+            <li><strong>Environment Exemplars</strong> (illustrative, non‑exhaustive):
+              <ul>
+                <li><em>CodeArena</em>: multi‑language software‑engineering sandbox for agent tool‑use benchmarking.
+                </li>
+                <li><em>HouseWorld</em>: 3‑D embodied household simulator with spatial reasoning tasks.</li>
+                <li><em>WebShop‑X</em>: dynamic e‑commerce website emulator for goal‑conditioned browsing and checkout.
+                </li>
+                <li><em>SocialTown</em>: multi‑agent social environment for coordination, negotiation, and role‑play
+                  evaluation.</li>
+              </ul>
+            </li>
+            <li><strong>Artifacts &amp; Reproducibility</strong>: dataset/specification releases, leaderboards,
+              reproducibility studies.</li>
+          </ul>
+          <br>
+          <!-- General Track -->
+          <h3 id="track-general">[General Track] Other Relevant Topics</h3>
+          <p>The general track welcomes research broadly related to scaling environments for agents, including but not
+            limited to:</p>
+          <ul style="list-style-type: disc; padding-left: 1em;">
+            <li><strong>LLMs in Interactive Environments</strong>: policy learning, planning, reward shaping, hybrid
+              training (e.g.&nbsp;RLHF, PPO), interaction‑based fine‑tuning.</li>
+            <li><strong>Tool‑Use and Software Environments</strong>: agents as programmers, API orchestration, agentic
+              debugging, self‑healing code, software manipulation, web navigation.</li>
+            <li><strong>Multi‑Agent &amp; Social Environments</strong>: population scaling, emergent behaviors,
+              communication, coordination, competition, social alignment and safety.</li>
+            <li><strong>Embodiment &amp; Grounding</strong>: perception‑action loops, physical simulation, spatial
+              reasoning, robotics integration, sim‑to‑real transfer.</li>
+            <li><strong>Sim2Real &amp; Deployment</strong>: domain adaptation, real‑world API integration, robustness
+              under scale, safety, large‑scale deployment.</li>
+          </ul>
+          <br>
+          <!-- Awards -->
+          <h4>Awards</h4>
+          <p>All accepted papers will be presented in a poster session. Up to four outstanding papers (two per track)
+            will be invited for oral presentations. Each track will confer its own <strong>Best Paper Award</strong>.
+          </p>
+
+          <!-- Submission Guidelines -->
+          <h3 id="submission-guidelines">Submission Guidelines</h3>
+          <p>We manage paper submissions through <a href="tbd" target="_blank"><u>OpenReview</u></a>. The review process
+            is <strong>double‑blind</strong>, so submissions must be
+            anonymized. We welcome work that is (1) original and unpublished, (2) recently published, or (3)
+            work‑in‑progress. Submissions will
+            <strong>not</strong> be indexed or have archival proceedings.
+          </p>
+
+          <p>Please use the <a href="https://media.neurips.cc/Conferences/NeurIPS2025/Styles.zip"
+              target="_blank"><u>NeurIPS 2025 LaTeX style file</u></a>; it includes a <code>preprint</code> option for
+            non‑anonymous preprints posted online (see additional formatting details <a
+              href="https://neurips.cc/Conferences/2025/CallForPapers" target="_blank"><u>here</u></a>). Submissions
+            should be PDFs of <strong>≤ 9&nbsp;pages</strong> (excluding references and appendices).</p>
+          <!-- Important Dates -->
+          <h3 id="important-dates">Important Dates <small>(Anywhere on Earth)</small></h3>
+          <table class="important-dates">
+            <tr>
+              <td><time datetime="2025-08-22"><strong>Aug 22</strong>&nbsp;</time></td>
+              <td>Paper Submission Deadline</td>
+            </tr>
+            <tr>
+              <td><time datetime="2025-09-22"><strong>Sep 22</strong>&nbsp;</time></td>
+              <td>Notification of Acceptance</td>
+            </tr>
+            <tr>
+              <td><time datetime="2025-10-10"><strong>Oct 10</strong>&nbsp;</time></td>
+              <td>Camera‑ready Paper Submission</td>
+            </tr>
+            <tr>
+              <td><time datetime="2025-12-06"><strong>Dec 6</strong>&nbsp;</time></td>
+              <td>Workshop at NeurIPS</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speakers & Panel Section -->
+    <section id="speakers" class="fade-in">
+      <div class="container">
+        <div class="section-header-component">
+          <div class="section-header-row">
+            <span class="section-header-title">Invited Speakers and Panelists</span>
+            <span class="section-header-subtitle">World Modeling Workshop</span>
+          </div>
+        </div>
+        <!-- speakers -->
+        <div class="speakers-title" style="margin-top:2rem; margin-bottom:1rem;">
+          <h3>Invited Speakers</h3>
+        </div>
+        <div class="organizers-grid">
+
+          <a href="#" target="_blank" class="organizer-card">
+            <img src="./public/tbd.png" alt="TBD" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">TBD</div>
+              <div class="organizer-org">...</div>
+            </div>
+          </a>
+
+          <a href="#" target="_blank" class="organizer-card">
+            <img src="./public/tbd.png" alt="TBD" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">TBD</div>
+              <div class="organizer-org">...</div>
+            </div>
+          </a>
+
+          <a href="#" target="_blank" class="organizer-card">
+            <img src="./public/tbd.png" alt="TBD" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">TBD</div>
+              <div class="organizer-org">...</div>
+            </div>
+          </a>
+
+          <a href="#" target="_blank" class="organizer-card">
+            <img src="./public/tbd.png" alt="TBD" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">TBD</div>
+              <div class="organizer-org">...</div>
+            </div>
+          </a>
+
+          <a href="#" target="_blank" class="organizer-card">
+            <img src="./public/tbd.png" alt="TBD" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">TBD</div>
+              <div class="organizer-org">...</div>
+            </div>
+          </a>
+
+          <a href="#" target="_blank" class="organizer-card">
+            <img src="./public/tbd.png" alt="TBD" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">TBD</div>
+              <div class="organizer-org">...</div>
+            </div>
+          </a>
+
+
+        </div>
+        <!-- tuorial -->
+        <div class="panelists-title" style="margin-top:2rem; margin-bottom:1rem;">
+          <h3>Tutorial</h3>
+        </div>
+        <div class="organizers-grid">
+          <a href="#" target="_blank" class="organizer-card">
+            <img src="./public/tbd.png" alt="TBD" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">TBD</div>
+              <div class="organizer-org">...</div>
+            </div>
+          </a>
+
+          <a href="#" target="_blank" class="organizer-card">
+            <img src="./public/tbd.png" alt="TBD" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">TBD</div>
+              <div class="organizer-org">...</div>
+            </div>
+          </a>
+
+          <a href="#" target="_blank" class="organizer-card">
+            <img src="./public/tbd.png" alt="TBD" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">TBD</div>
+              <div class="organizer-org">...</div>
+            </div>
+          </a>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule fade-in">
+      <div class="container">
+        <div class="section-header-component">
+          <div class="section-header-row">
+            <span class="section-header-title">Schedule (Tentative)</span>
+            <span class="section-header-subtitle">World Modeling Workshop</span>
+          </div>
+        </div>
+        <h3 id="track-general">Day 1</h3>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="schedule-table">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Session</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>09:00</td>
+                    <td>Opening Remarks</td>
+                    <td>10 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>09:10</td>
+                    <td>Contributed Talks 1 & 2</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10:00</td>
+                    <td>Coffee Break</td>
+                    <td>20 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10:20</td>
+                    <td>Poster Session 1</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>11:10</td>
+                    <td>Invited Talks 1 & 2</td>
+                    <td>60 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>12:10</td>
+                    <td>Lunch Break</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>13:00</td>
+                    <td>Invited Talks 3 & 4</td>
+                    <td>60 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>14:00</td>
+                    <td>Coffee Break</td>
+                    <td>20 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>14:20</td>
+                    <td>Contributed Talks 3 & 4</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>15:10</td>
+                    <td>Poster Session 2</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>16:00</td>
+                    <td>Invited Talk 5 & 6</td>
+                    <td>60 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>17:00</td>
+                    <td>Panel Discussion</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>17:50</td>
+                    <td>Closing Remarks</td>
+                    <td>10 min</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>     
+
+      <section id="schedule" class="schedule fade-in"> 
+      <div class="container">
+        <div class="section-header-component">
+          <div class="section-header-row">
+          </div>
+        </div>
+        <h3 id="track-general">Day 2</h3>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="schedule-table">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Session</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>09:00</td>
+                    <td>Opening Remarks</td>
+                    <td>10 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>09:10</td>
+                    <td>Contributed Talks 1 & 2</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10:00</td>
+                    <td>Coffee Break</td>
+                    <td>20 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10:20</td>
+                    <td>Poster Session 1</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>11:10</td>
+                    <td>Invited Talks 1 & 2</td>
+                    <td>60 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>12:10</td>
+                    <td>Lunch Break</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>13:00</td>
+                    <td>Invited Talks 3 & 4</td>
+                    <td>60 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>14:00</td>
+                    <td>Coffee Break</td>
+                    <td>20 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>14:20</td>
+                    <td>Contributed Talks 3 & 4</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>15:10</td>
+                    <td>Poster Session 2</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>16:00</td>
+                    <td>Invited Talk 5 & 6</td>
+                    <td>60 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>17:00</td>
+                    <td>Panel Discussion</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>17:50</td>
+                    <td>Closing Remarks</td>
+                    <td>10 min</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="schedule" class="schedule fade-in"> 
+      <div class="container">
+        <div class="section-header-component">
+          <div class="section-header-row">
+          </div>
+        </div>
+        <h3 id="track-general">Day 3</h3>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="schedule-table">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Session</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>09:00</td>
+                    <td>Opening Remarks</td>
+                    <td>10 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>09:10</td>
+                    <td>Contributed Talks 1 & 2</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10:00</td>
+                    <td>Coffee Break</td>
+                    <td>20 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10:20</td>
+                    <td>Poster Session 1</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>11:10</td>
+                    <td>Invited Talks 1 & 2</td>
+                    <td>60 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>12:10</td>
+                    <td>Lunch Break</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>13:00</td>
+                    <td>Invited Talks 3 & 4</td>
+                    <td>60 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>14:00</td>
+                    <td>Coffee Break</td>
+                    <td>20 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>14:20</td>
+                    <td>Contributed Talks 3 & 4</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>15:10</td>
+                    <td>Poster Session 2</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>16:00</td>
+                    <td>Invited Talk 5 & 6</td>
+                    <td>60 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>17:00</td>
+                    <td>Panel Discussion</td>
+                    <td>50 min</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>17:50</td>
+                    <td>Closing Remarks</td>
+                    <td>10 min</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Organizers Section -->
+    <section id="organizers" class="fade-in">
+      <div class="container">
+        <div class="section-header-component">
+          <div class="section-header-row">
+            <span class="section-header-title">Organizers</span>
+            <span class="section-header-subtitle">World Modeling Workshop</span>
+          </div>
+        </div>
+        <!-- organizers -->
+        <div class="organizers-grid">
+          <a href="https://lucas-maes.github.io" target="_blank" class="organizer-card">
+            <img src="./public/lucas-maes.png" alt="Lucas Maes" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">Lucas Maes</div>
+              <div class="organizer-org">Mila, UdeM</div>
+            </div>
+          </a>
+          <a href="https://www.yuanhe.wiki/" target="_blank" class="organizer-card">
+            <img src="./public/yuan-he.png" alt="Hafez Ghaemi" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">Hafez Ghaemi</div>
+              <div class="organizer-org">Mila, UdeM</div>
+            </div>
+          </a>
+          <a href="https://mayrfung.github.io/" target="_blank" class="organizer-card">
+            <img src="./public/yir-fung.png" alt="Yipeng Zhang" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">Yipeng Zhang</div>
+              <div class="organizer-org">Mila, UdeM</div>
+            </div>
+          </a>
+
+          <div class="organizer-card">
+            <img src="./public/alisia-lupidi.png" alt="Tugce Gurbuz" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">Tugce Gurbuz</div>
+              <div class="organizer-org">Mila, McGill</div>
+            </div>
+          </div>
+
+          <a href="https://hazelye-bot.github.io/" target="_blank" class="organizer-card">
+            <img src="./public/ziyu-ye.png" alt="Xiaofeng Zhang" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">Xiaofeng Zhang</div>
+              <div class="organizer-org">Mila, UdeM & Meta</div>
+            </div>
+          </a>
+
+          <a href="https://randallbalestriero.github.io/" target="_blank" class="organizer-card">
+            <img src="./public/randall-balestriero.png" alt="Randall Balestriero" class="organizer-photo">
+            <div class="organizer-info">
+              <div class="organizer-name">Randall Balestriero</div>
+              <div class="organizer-org">Brown, Meta</div>
+            </div>
+          </a>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Team Section -->
+    <section id="support-team" class="fade-in">
+      <div class="container">
+        <div class="section-header-component">
+          <div class="section-header-row">
+            <span class="section-header-title">Support Team</span>
+            <span class="section-header-subtitle">World Modeling Workshop</span>
+          </div>
+        </div>
+        <div class="section-content">
+          <ul class="support-team-list">
+            <li>
+              <strong>Logistics Coordinators:</strong> Some people here...
+            </li>
+          </ul>
+          <p style="margin-top: 1.5em; font-style: italic; color: var(--color-neutral-600);">
+            We thank our support team for their dedication and behind-the-scenes work that made this workshop possible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+      <div class="container">
+        <ul class="contact-list">
+          <li><strong>Contact:</strong> <a href="mailto:worldmodel.mila@gmail.com"
+              class="contact-link">worldmodel.mila@gmail.com<span class="arrow-upright">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12L12 4M12 4H5.5M12 4V10.5" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <blockquote class="contact-blockquote">
+        NICE QUOTE HERE
+      </blockquote>
+      <p class="footer-text">&copy;  World Model @ Mila. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="styles/js/main.js"></script>
+</body>
+
+</html>
