@@ -31,7 +31,7 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="nav-link scrollto active" href="#home">Home</a></li>
-        <li><a class="nav-link scrollto" href="#call-for-papers">Call for Papers</a></li>
+        <li><a class="nav-link scrollto" href="#call-for-abstracts">Call for Abstracts</a></li>
         <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
         <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
         <li><a class="nav-link scrollto" href="#organizers">Organizers</a></li>
@@ -67,10 +67,10 @@
     <section id="about" class="fade-in">
       <div class="about" style="text-align: justify;">
         <p>A fundamental capability of AI agents is to model the evolution and dynamics of their environments in response to their own and external actions.
-           This capability is often referred to as world modeling and is essential for prediction, planning, and generalization.
+           This capability is often referred to as world modeling (WM) and is essential for prediction, planning, and generalization.
           Learning world models using deep learning has been an active area of research for nearly a decade. 
           In recent years, the field has witnessed significant breakthroughs driven by advances in deep neural
-           architectures and scalable learning paradigms. Multiple subfields, including as self-supervised learning (SSL),
+           architectures and scalable learning paradigms. Multiple subfields, including self-supervised learning (SSL),
             generative modeling, reinforcement learning (RL), robotics, and large language models (LLMs), have tackled aspects of
              world modeling, often with different tools and methodologies. While these communities address overlapping challenges,
               they frequently operate in isolation. As a result, insights and progress in one area may go unnoticed in another,
@@ -84,98 +84,15 @@
 
 
     <!-- Call for Papers Section -->
-    <section id="call-for-papers" class="fade-in">
+    <section id="call-for-abstracts" class="fade-in">
       <div class="container">
         <div class="section-header-component">
           <div class="section-header-row">
-            <span class="section-header-title">Call for Papers</span>
+            <span class="section-header-title">Call for Abstracts</span>
             <span class="section-header-subtitle">World Modeling Workshop</span>
           </div>
         </div>
-        <p>We invite submissions to two complementary tracks:</p>
-        <div class="section-content">
-          <!-- Special Track -->
-          <h3 id="track-special">[Special Track] Agent Environment Design&nbsp;and&nbsp;Evaluation</h3>
-          <p>The special track focuses on our core theme: <strong>agent environment design and evaluation</strong>. We
-            welcome work that advances how environments are specified, generated, measured, and shared.</p>
-          <ul style="list-style-type: disc; padding-left: 1em;">
-            <li><strong>Task &amp; World Specification</strong>: formalization, compositionality, affordance modeling,
-              procedural generation, simulator integration.</li>
-            <li><strong>Evaluation Methodologies</strong>: multi‑step interaction metrics, generalization tests,
-              open‑ended benchmarks, curriculum scaling, human‑in‑the‑loop assessments.</li>
-            <li><strong>Environment Exemplars</strong> (illustrative, non‑exhaustive):
-              <ul>
-                <li><em>CodeArena</em>: multi‑language software‑engineering sandbox for agent tool‑use benchmarking.
-                </li>
-                <li><em>HouseWorld</em>: 3‑D embodied household simulator with spatial reasoning tasks.</li>
-                <li><em>WebShop‑X</em>: dynamic e‑commerce website emulator for goal‑conditioned browsing and checkout.
-                </li>
-                <li><em>SocialTown</em>: multi‑agent social environment for coordination, negotiation, and role‑play
-                  evaluation.</li>
-              </ul>
-            </li>
-            <li><strong>Artifacts &amp; Reproducibility</strong>: dataset/specification releases, leaderboards,
-              reproducibility studies.</li>
-          </ul>
-          <br>
-          <!-- General Track -->
-          <h3 id="track-general">[General Track] Other Relevant Topics</h3>
-          <p>The general track welcomes research broadly related to scaling environments for agents, including but not
-            limited to:</p>
-          <ul style="list-style-type: disc; padding-left: 1em;">
-            <li><strong>LLMs in Interactive Environments</strong>: policy learning, planning, reward shaping, hybrid
-              training (e.g.&nbsp;RLHF, PPO), interaction‑based fine‑tuning.</li>
-            <li><strong>Tool‑Use and Software Environments</strong>: agents as programmers, API orchestration, agentic
-              debugging, self‑healing code, software manipulation, web navigation.</li>
-            <li><strong>Multi‑Agent &amp; Social Environments</strong>: population scaling, emergent behaviors,
-              communication, coordination, competition, social alignment and safety.</li>
-            <li><strong>Embodiment &amp; Grounding</strong>: perception‑action loops, physical simulation, spatial
-              reasoning, robotics integration, sim‑to‑real transfer.</li>
-            <li><strong>Sim2Real &amp; Deployment</strong>: domain adaptation, real‑world API integration, robustness
-              under scale, safety, large‑scale deployment.</li>
-          </ul>
-          <br>
-          <!-- Awards -->
-          <h4>Awards</h4>
-          <p>All accepted papers will be presented in a poster session. Up to four outstanding papers (two per track)
-            will be invited for oral presentations. Each track will confer its own <strong>Best Paper Award</strong>.
-          </p>
-
-          <!-- Submission Guidelines -->
-          <h3 id="submission-guidelines">Submission Guidelines</h3>
-          <p>We manage paper submissions through <a href="tbd" target="_blank"><u>OpenReview</u></a>. The review process
-            is <strong>double‑blind</strong>, so submissions must be
-            anonymized. We welcome work that is (1) original and unpublished, (2) recently published, or (3)
-            work‑in‑progress. Submissions will
-            <strong>not</strong> be indexed or have archival proceedings.
-          </p>
-
-          <p>Please use the <a href="https://media.neurips.cc/Conferences/NeurIPS2025/Styles.zip"
-              target="_blank"><u>NeurIPS 2025 LaTeX style file</u></a>; it includes a <code>preprint</code> option for
-            non‑anonymous preprints posted online (see additional formatting details <a
-              href="https://neurips.cc/Conferences/2025/CallForPapers" target="_blank"><u>here</u></a>). Submissions
-            should be PDFs of <strong>≤ 9&nbsp;pages</strong> (excluding references and appendices).</p>
-          <!-- Important Dates -->
-          <h3 id="important-dates">Important Dates <small>(Anywhere on Earth)</small></h3>
-          <table class="important-dates">
-            <tr>
-              <td><time datetime="2025-08-22"><strong>Aug 22</strong>&nbsp;</time></td>
-              <td>Paper Submission Deadline</td>
-            </tr>
-            <tr>
-              <td><time datetime="2025-09-22"><strong>Sep 22</strong>&nbsp;</time></td>
-              <td>Notification of Acceptance</td>
-            </tr>
-            <tr>
-              <td><time datetime="2025-10-10"><strong>Oct 10</strong>&nbsp;</time></td>
-              <td>Camera‑ready Paper Submission</td>
-            </tr>
-            <tr>
-              <td><time datetime="2025-12-06"><strong>Dec 6</strong>&nbsp;</time></td>
-              <td>Workshop at NeurIPS</td>
-            </tr>
-          </table>
-        </div>
+        <p>We invite submissions of 300-word abstracts. Participants interested in presenting a poster are invited to submit a title and abstract as part of their application form. All poster submissions will undergo a light review process and priority for registration will be given to applicants with accepted posters. </p>
       </div>
     </section>
 
