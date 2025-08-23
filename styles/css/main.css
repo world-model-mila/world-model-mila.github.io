@@ -664,6 +664,10 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 2rem;
 }
+.speakers-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
 .organizer-card {
   background: var(--color-white);
   padding: 2rem 1rem;
