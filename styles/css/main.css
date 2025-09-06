@@ -978,3 +978,16 @@ footer {
   max-height: 100%;
   object-fit: contain;
 }
+
+/* Restore bullets only in the Call for Papers section */
+#call-for-papers ul {
+  list-style: disc outside;   /* normal round bullets */
+  padding-left: 1.5rem;       /* indentation */
+  margin-block: 1em;          /* top/bottom spacing, optional */
+}
+
+#call-for-papers ol {
+  list-style: decimal outside;
+  padding-left: 1.5rem;
+  margin-block: 1em;
+}
