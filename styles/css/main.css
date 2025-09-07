@@ -715,6 +715,20 @@ footer {
   text-decoration: underline;
 }
 
+/* Ensure speaker name and method links match non-link styles */
+.organizer-name a {
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.organizer-org a {
+  color: var(--color-neutral-700);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
 .pc-list-item {
   font-size: 0.9rem;
   color: var(--color-neutral-700);
