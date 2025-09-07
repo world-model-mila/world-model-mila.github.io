@@ -726,7 +726,7 @@ footer {
 .organizer-org a {
   color: var(--color-neutral-700);
   font-size: 0.95rem;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .pc-list-item {
