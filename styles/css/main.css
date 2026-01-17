@@ -993,6 +993,19 @@ footer {
   object-fit: contain;
 }
 
+.info-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
+  margin-top: 1rem;
+  object-fit: contain;
+  /* center the image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Restore bullets only in the Call for Papers section */
 #call-for-papers ul {
   list-style: disc outside;   /* normal round bullets */
