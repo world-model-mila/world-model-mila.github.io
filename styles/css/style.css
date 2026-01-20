@@ -94,3 +94,116 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* =========================================
+   SCHEDULE SECTION STYLING
+   ========================================= */
+
+/* Section Container */
+.schedule-section {
+  padding-bottom: 40px;
+  font-family: 'Inter', sans-serif; /* Matches your site theme */
+}
+
+/* Headers for each day (e.g., Day 1 - Wednesday...) */
+.day-header {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.day-header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary, #4c19e8); /* Uses your brand color */
+  margin: 0;
+}
+
+.day-header span {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+}
+
+/* The Table Structure */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem; 
+  background-color: transparent;
+}
+
+.schedule-table th {
+  text-align: left;
+  padding: 12px 8px;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 1px solid #ccc;
+}
+
+.schedule-table td {
+  padding: 14px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Dark Mode Support (based on your existing CSS system preferences) */
+@media (prefers-color-scheme: dark) {
+  .schedule-table td { color: #e0e0e0; border-bottom: 1px solid #444; }
+  .day-header h3 { color: #a48eff; }
+  .day-header span { color: #aaa; }
+  .row-break td { background-color: #333 !important; color: #ccc !important; }
+  .col-time { color: #bbb !important; }
+  .event-speaker { color: #ccc !important; }
+  .panel-list { color: #bbb !important; }
+}
+
+/* Time Column - Fixed width and Monospace font for alignment */
+.col-time {
+  width: 90px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* Event Column */
+.col-event {
+  width: auto;
+}
+
+/* Styling specific row types */
+.row-break td {
+  background-color: #f8f9fa; /* Light grey for breaks */
+  color: #666;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.event-title {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.event-speaker {
+  color: #444;
+  font-weight: 400;
+}
+
+/* Panelists list specific styling */
+.panel-list {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 6px;
+  background: rgba(0,0,0,0.03);
+  padding: 8px;
+  border-radius: 6px;
+}
