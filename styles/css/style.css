@@ -106,8 +106,9 @@ button:focus-visible {
 }
 
 /* Headers for each day (e.g., Day 1 - Wednesday...) */
+/* Update this section in styles/css/style.css */
 .day-header {
-  margin-top: 40px;
+  margin-top: 80px; /* Increased from 40px to create a big gap */
   margin-bottom: 20px;
   border-bottom: 2px solid #eaeaea;
   padding-bottom: 10px;
@@ -213,3 +214,4 @@ button:focus-visible {
   margin-top: 4px;
   color: #444;
 }
+
