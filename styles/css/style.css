@@ -102,16 +102,14 @@ button:focus-visible {
 /* Section Container */
 .schedule-section {
   padding-bottom: 40px;
-  font-family: 'Inter', sans-serif; /* Matches your site theme */
+  font-family: 'Inter', sans-serif; 
 }
 
-/* Headers for each day (e.g., Day 1 - Wednesday...) */
-/* Update this section in styles/css/style.css */
 .day-header {
-  margin-top: 80px; /* Increased from 40px to create a big gap */
-  margin-bottom: 20px;
-  border-bottom: 2px solid #eaeaea;
+  margin-top: 40px;   
+  margin-bottom: 0px; 
   padding-bottom: 10px;
+  border-bottom: 2px solid #eaeaea;
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
@@ -121,7 +119,7 @@ button:focus-visible {
 .day-header h3 {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--color-primary, #4c19e8); /* Uses your brand color */
+  color: var(--color-primary, #4c19e8); 
   margin: 0;
 }
 
