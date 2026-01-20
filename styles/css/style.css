@@ -207,3 +207,9 @@ button:focus-visible {
   padding: 8px;
   border-radius: 6px;
 }
+
+.event-subtitle {
+  display: block;
+  margin-top: 4px;
+  color: #444;
+}
